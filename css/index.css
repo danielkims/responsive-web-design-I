@@ -147,23 +147,21 @@ h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
-body {
-  width: 1000px;
+.container {
+  width: 900px;
   margin: 0 auto;
 }
 
-nav {
-  margin-top: 20px;
-  display: flex;
+header{
   width: 100%;
-  height: 60px;
-  align-items: center;
-  justify-content: space-around;
+  display: flex;
 }
 
-nav a {
-  text-decoration: none;
-  color: grey;
+header nav {
+  margin-top: 40px;
+  width: 630px;
+  justify-content: space-between;
+  display: flex;
 }
 
 header {
@@ -173,68 +171,119 @@ header {
   align-items: center;
 }
 
-header .left-container {
+header nav a {
+    text-decoration: none;
+    color: grey;
+
+header nav a:hover {
+        text-decoration: underline;
+        color: black;
+
+header .logo {
+  margin: 28px 0 0 90px;
+}
+
+.center{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 70px;
+  justify-content: flex-end;
 }
-
-header h1 {
-  font-size: 70px;
+.center .center-text{
+  font-size: 72px;
   text-align: center;
-}
-
-.button {
-  width: 50%;
-  font-size: 20px;
-  padding: 5px 10px;
-  border: 1px solid black;
+  letter-spacing: 5px;
   display: flex;
   justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  margin: 0 82px 0 0;
 }
 
-.button a {
-  text-decoration: none;
-  color: black;
+.center .center-text button{
+  border: 1px double black;
+  font-size: 16px;
+  background: white;
+  width: 170px;
+  height: 32px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
-.divider {
+.center .center-text button:hover{
+  background: black;
+  color: white;
+}
+.main-content{
   border-top: 2px solid black;
+   border-bottom: 2px solid black;
+   margin: 75px 0 35px 0;
+   padding: 35px 0;
+   font-size: 16px;
+   line-height: 18px;
 }
-
-.middle {
-  margin: 30px 0;
-}
-
-.middle-top {
+.main-content .top-content{
   display: flex;
-  justify-content: space-around;
 }
-
-.top-container {
-  width: 40%;
+.main-content .middle-img{
+  display: block;
+  margin: 30px auto;
 }
-
-.middle-img {
-  width: 100%;
-  margin: 20px 0;
-}
-
-.middle-bottom {
+.main-content .bottom-content{
   display: flex;
-  justify-content: space-between;
-  width: 1000px;
-  margin-bottom: 20px;
 }
-
-.bottom-container {
-  width: 30%;
+.main-content .bottom-content{
+  padding-right: 20px;
 }
-
 .contact {
-  margin: 30px 0;
+  margin: 15px;
 }
-
-footer {
+.footer{
   text-align: center;
+  margin: 40px 0 20px;
+}
+/* Tablet View*/
+@media (max-width: 800px){
+  .container{
+    width: 100%;
+  }
+  .header{
+    flex-wrap: wrap;
+  }
+  .header nav{
+    width: 770px;
+    padding: 0 30px;
+  }
+  .header logo{
+    order: -1;
+    display: block;
+    margin: 30px auto 0;
+  }
+}
+.center {
+        justify-content: center;
+    }
+
+    .center .center-text {
+        margin: 0;
+    }
+
+    .center img {
+        display: none;
+    }
+
+    .main-content .middle-img {
+       width: 100%;
+    }
+
+    .main-content {
+       margin: 75px 20px 35px;
+    }
+
+    .text-content {
+        margin: 0 10px;
+    }
+
+    .contact {
+        margin: 0 30px;
+    }
 }
